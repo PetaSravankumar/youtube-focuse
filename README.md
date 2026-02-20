@@ -1,3 +1,13 @@
+<img width="596" height="223" alt="Screenshot 2026-02-20 113521" src="https://github.com/user-attachments/assets/b3d896bd-1167-4d71-9d22-ad393153f31b" />
+<img width="479" height="153" alt="Screenshot 2026-02-20 112849" src="https://github.com/user-attachments/assets/e5e4c79a-0322-4f60-a863-88ff64f33cf7" />
+<img width="1888" height="897" alt="Screenshot 2026-02-20 112833" src="https://github.com/user-attachments/assets/46a07e6a-f0d1-4f98-a0e9-2cfc1e7ba2c2" />
+<img width="359" height="475" alt="Screenshot 2026-02-19 225053" src="https://github.com/user-attachments/assets/81e1a5d0-7aca-4260-85e5-fd776150fd8e" />
+<img width="1903" height="975" alt="Screenshot 2026-02-19 225042" src="https://github.com/user-attachments/assets/6e6c7511-0b09-4458-a768-02c772bcc2f3" />
+<img width="1920" height="1080" alt="Screenshot 2026-02-19 221812" src="https://github.com/user-attachments/assets/af54360a-1978-49db-850e-7fc6fa2ff4b3" />
+<img width="1920" height="1080" alt="Screenshot 2026-02-19 221805" src="https://github.com/user-attachments/assets/519ae771-b16d-4b5e-821b-4b407be84ccf" />
+<img width="1920" height="1080" alt="Screenshot 2026-02-19 221747" src="https://github.com/user-attachments/assets/482c06c8-8b1a-490a-bc27-9f04a8dfa948" />
+<img width="1920" height="1080" alt="Screenshot 2026-02-19 221739" src="https://github.com/user-attachments/assets/c1add8ed-f826-4928-a8e6-c2ca3f8f79bd" />
+<img width="1920" height="1080" alt="Screenshot 2026-02-19 221731" src="https://github.com/user-attachments/assets/b6ddbabd-a6d3-4138-815d-2a3462a4dda0" />
 **YouTube Focus Mode – Chrome Extension (Manifest V3)**
 
 **Overview**
