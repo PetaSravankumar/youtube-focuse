@@ -1,269 +1,191 @@
-<img width="479" height="153" alt="Screenshot 2026-02-20 112849" src="https://github.com/user-attachments/assets/5d73c170-d932-4e01-b17b-278c98e50c65" />
-<img width="596" height="223" alt="Screenshot 2026-02-20 113521" src="https://github.com/user-attachments/assets/01e75c19-d56c-4497-9bd5-4e09d8e39adb" />
-<img width="1888" height="897" alt="Screenshot 2026-02-20 112833" src="https://github.com/user-attachments/assets/aca4f70b-c059-48fe-9e6d-f468d26566e6" />
-<img width="359" height="475" alt="Screenshot 2026-02-19 225053" src="https://github.com/user-attachments/assets/0dc075fe-e892-4202-a468-221a48fbc6ba" />
-<img width="1903" height="975" alt="Screenshot 2026-02-19 225042" src="https://github.com/user-attachments/assets/03b17c0c-8e36-4e5e-960a-61bb41789ac3" />
+# YouTube Focus Mode – Chrome Extension (Manifest V3)
 
-**YouTube Focus Mode – Chrome Extension (Manifest V3)**
+YouTube Focus Mode is a productivity-enhancing Chrome Extension designed to convert YouTube into a distraction-free learning environment.
 
-**Overview**
+The extension hides recommended videos, comments, and sidebar suggestions during active focus sessions and integrates an interactive clock-based timer with full session control (Start, Pause, Resume, Stop).
 
-YouTube Focus Mode is a productivity-focused Chrome Extension designed to transform YouTube into a structured, distraction-free learning environment. The extension dynamically removes recommended videos, comments, and sidebar suggestions during active focus sessions while integrating a fully functional, persistent timer engine.
+---
 
-The primary objective of this project was not just UI manipulation, but to implement a scalable and reliable browser extension architecture using Chrome’s Manifest V3 standards, service workers, and inter-script communication.
+## Screenshots
 
-This project demonstrates real-world browser extension development, asynchronous state synchronization, DOM injection strategies, and lifecycle-aware timer management.
+![Focus Mode Interface](Screenshot%202026-02-20%20112849.png)
+Main focus mode interface with distraction removal
 
-**Problem Statement**
+![Clock Timer UI](Screenshot%202026-02-20%20113521.png)
+Interactive clock-based time selection
 
-While YouTube is a powerful learning platform, it also contains highly distracting elements such as:
+![Active Session](Screenshot%202026-02-20%20112833.png)
+Active focus session with real-time countdown
 
-Related videos
+![Break Workflow](Screenshot%202026-02-19%20225053.png)
+Break and post-session workflow options
 
-Recommended content
+---
 
-Comment sections
+## Overview
 
-Sidebar suggestions
+YouTube Focus Mode helps users maintain deep concentration while consuming educational content on YouTube. It removes distracting page elements during structured focus sessions and manages time using a persistent background timer engine.
 
-These elements interrupt deep concentration and reduce study efficiency. The extension was built to address this problem by creating a structured focus workflow directly within the browser.
+The extension is built using Chrome Extension Manifest V3 architecture and demonstrates real-world browser API integration, asynchronous communication, and state synchronization.
 
-**Core Features
-1. Focus Mode**
+---
 
-The extension enables a distraction-free mode by dynamically hiding:
+## Core Features
 
-Sidebar recommendations
+### Focus Mode
 
-Related videos section
+- Hides sidebar recommendations
+- Hides related videos
+- Hides comment section
+- Dynamically injects and removes styles
+- Automatically restores layout after session ends
 
-**Comments section**
+### Interactive Clock-Based Timer
 
-Secondary watch results container
+- Visual circular time selection interface
+- Start functionality
+- Pause functionality
+- Resume functionality
+- Stop functionality
+- Real-time MM:SS countdown display
+- Timer continues running even if popup is closed
 
-This is achieved through content script–based DOM manipulation and runtime style injection. Focus mode activates during an active timer session and automatically restores the original YouTube layout once the session ends.
+### Structured Focus–Break Workflow
 
-**2. Interactive Clock-Based Focus Timer**
+- Pomodoro-inspired workflow
+- Post-session overlay with restart and break options
+- Floating break timer displayed on page
+- Independent break timer logic
+- Restart previous session option
 
-A custom-built circular clock interface allows users to visually select study duration. The timer system includes:
+### Background Timer Engine
 
-Interactive time selection
+- Runs inside Manifest V3 service worker
+- Maintains persistent state using chrome.storage.local
+- Handles lifecycle-aware time calculations
+- Sends state updates to popup and content script
+- Triggers completion notifications
 
-Start control
+---
 
-Pause functionality
+## Architecture
 
-Resume capability
+The extension follows a three-layer architecture:
 
-**Stop control**
+### Background (Service Worker)
 
-Real-time MM:SS countdown display
+- Manages focus and break timers
+- Maintains session state
+- Handles notifications
+- Persists timing data
 
-The timer continues running in the background even when the popup UI is closed. This is implemented using a background service worker that maintains time state independently from the popup interface.
+### Popup Layer
 
-**3. Persistent Background Timer Engine**
+- Provides interactive UI
+- Displays real-time countdown
+- Sends control commands
+- Retrieves state from storage
 
-The timer engine runs inside the background service worker (Manifest V3). Key responsibilities include:
+### Content Script Layer
 
-Managing focus session lifecycle
+- Injects focus mode styles
+- Manipulates YouTube DOM
+- Displays overlay popups
+- Renders floating break timer
+- Listens for storage changes
 
-Tracking remaining time
+---
 
-Synchronizing state using chrome.storage.local
+## Technologies Used
 
-Triggering UI updates via runtime messaging
+- Chrome Extension Manifest V3
+- JavaScript (Event-driven architecture)
+- Service Workers
+- Chrome Storage API
+- Chrome Runtime Messaging
+- Chrome Notifications API
+- DOM Manipulation and Style Injection
+- Asynchronous Event Handling
 
-Maintaining persistence even when popup is closed
+---
 
-This ensures accurate timing behavior without relying on popup-based intervals.
+## Technical Challenges Solved
 
-**4. Structured Focus–Break Workflow**
+- Service worker lifecycle resets in Manifest V3
+- Asynchronous runtime messaging synchronization
+- Cross-context state consistency (popup, background, content script)
+- Timer persistence across popup closure
+- Dynamic DOM injection on frequently updated YouTube pages
+- Notification permission and resource handling
 
-The extension implements a Pomodoro-inspired workflow:
+---
 
-Focus session
+## Installation (Manual)
 
-Break session
+1. Clone the repository:
 
-Optional restart of previous session
+   ```bash
+   git clone https://github.com/PetaSravankumar/youtube-focuse.git
+   ```
 
-Quit workflow
+2. Open Chrome and navigate to:
 
-When a focus session ends or is manually stopped:
+   ```
+   chrome://extensions/
+   ```
 
-A dynamic overlay is displayed
+3. Enable Developer Mode.
+4. Click "Load unpacked".
+5. Select the project folder.
 
-The user can choose to take a break
+The extension will now be installed locally.
 
-A floating break timer appears on the YouTube page
+---
 
-The previous focus duration can be restarted
+## Usage
 
-The break timer operates independently from the main focus timer.
+1. Open YouTube.
+2. Click the extension icon.
+3. Select focus duration using the clock.
+4. Click Start.
+5. Use Pause, Resume, or Stop as needed.
+6. When session completes, choose Break, Restart, or Quit.
 
-**5. Chrome Notifications**
+---
 
-Upon session completion, a Chrome system notification is triggered using the Notifications API. This ensures that users are alerted even if they switch tabs or minimize the browser window.
+## Professional Value
 
-**Technical Architecture**
+This project demonstrates:
 
-The extension follows a modular three-layer architecture:
+- Chrome Extension development using Manifest V3
+- Background service worker lifecycle handling
+- Real-time state synchronization
+- Event-driven system architecture
+- Cross-context messaging
+- Production-level debugging and browser API integration
 
-**Background Layer (Service Worker)**
+It reflects practical frontend engineering combined with browser-level application design.
 
-Manages focus and break timer engines
+---
 
-Maintains state persistence
+## Future Enhancements
 
-Handles asynchronous time calculations
+- Custom focus and break duration settings
+- Focus analytics dashboard
+- Daily productivity tracking
+- Sound alerts
+- Automatic Pomodoro cycling
+- Theme customization
 
-Controls notification logic
+---
 
-Stores previous focus session duration
+## Author
 
-**Popup Layer**
+Peta Sravan Kumar  
+B.Tech – Artificial Intelligence and Data Science  
 
-Interactive clock UI
+---
 
-Timer control interface
+## License
 
-Real-time display synchronization
-
-Sends control messages to background
-
-Retrieves session state from storage
-
-**Content Script Layer**
-
-Injects focus mode styles
-
-Manipulates YouTube DOM
-
-Displays overlay popups
-
-Renders floating break timer
-
-Listens to storage changes for UI updates
-
-**Technologies Used**
-
-Chrome Extension Manifest V3
-
-JavaScript (Vanilla, Event-Driven Architecture)
-
-Service Workers
-
-Chrome Storage API
-
-Chrome Runtime Messaging API
-
-Chrome Notifications API
-
-DOM Manipulation and Dynamic Style Injection
-
-Asynchronous Event Handling
-
-****Technical Challenges and Solutions**
-Service Worker Lifecycle Management**
-
-Manifest V3 service workers can become inactive. The timer engine was designed to rehydrate state from storage and maintain consistent behavior across lifecycle resets.
-
-**Asynchronous Runtime Messaging**
-
-Message passing between popup, background, and content scripts required careful handling of asynchronous responses and state updates.
-
-Cross-Context State Synchronization
-
-Focus state needed to remain consistent across:
-
-Popup UI
-
-**Background worker**
-
-**Content script**
-
-This was achieved using chrome.storage.local as a centralized state store.
-
-**Timer Persistence Across Popup Closure**
-
-Since popup scripts are destroyed when closed, all timing logic was moved to the background service worker to prevent session loss.
-
-**Dynamic DOM Injection Handling**
-
-YouTube dynamically updates its layout. Focus mode selectors were carefully implemented to maintain stability even with dynamic DOM changes.
-
-**Notification Permission Handling**
-
-Proper manifest configuration and icon resource handling were required to avoid runtime notification errors.
-
-**Project Structure**
-
-**youtube-focus-mode/
-│
-├── manifest.json
-├── background.js
-├── content.js
-├── popup.html
-├── popup.js
-├── popup.css
-│
-└── README.md**
-
-**Installation (Manual – Free Method)**
-
-**Clone the repository:**
-
-git clone https://github.com/yourusername/youtube-focus-mode.git
-
-Open Chrome and navigate to:
-
-chrome://extensions/
-
-Enable Developer Mode.
-
-Click “Load unpacked”.
-
-Select the project folder.
-
-The extension is now installed and ready to use.
-
-Professional Value
-
-**This project demonstrates:**
-
-Practical Chrome Extension development experience
-
-Browser-level application architecture understanding
-
-Asynchronous programming expertise
-
-**Real-time state management**
-
-UI–background synchronization patterns
-
-Manifest V3 service worker implementation
-
-Real-world debugging and lifecycle handling
-
-It reflects strong frontend engineering skills combined with browser API integration and system-level thinking.
-**
-**Future Enhancements****
-
-Customizable focus and break durations
-
-Focus analytics dashboard
-
-Daily productivity tracking
-
-Sound alerts
-
-Cloud synchronization
-
-Auto-cycle Pomodoro mode
-
-Theme customization
-
-**Author**
-Peta Sravan Kumar
-
-Focused on building practical, real-world productivity tools and browser-based applications.
+This project is open-source and available under the MIT License.
