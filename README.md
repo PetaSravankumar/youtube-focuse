@@ -1,3 +1,8 @@
+<img width="479" height="153" alt="Screenshot 2026-02-20 112849" src="https://github.com/user-attachments/assets/5d73c170-d932-4e01-b17b-278c98e50c65" />
+<img width="596" height="223" alt="Screenshot 2026-02-20 113521" src="https://github.com/user-attachments/assets/01e75c19-d56c-4497-9bd5-4e09d8e39adb" />
+<img width="1888" height="897" alt="Screenshot 2026-02-20 112833" src="https://github.com/user-attachments/assets/aca4f70b-c059-48fe-9e6d-f468d26566e6" />
+<img width="359" height="475" alt="Screenshot 2026-02-19 225053" src="https://github.com/user-attachments/assets/0dc075fe-e892-4202-a468-221a48fbc6ba" />
+<img width="1903" height="975" alt="Screenshot 2026-02-19 225042" src="https://github.com/user-attachments/assets/03b17c0c-8e36-4e5e-960a-61bb41789ac3" />
 
 **YouTube Focus Mode – Chrome Extension (Manifest V3)**
 
