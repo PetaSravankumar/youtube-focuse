@@ -1,4 +1,5 @@
 **YouTube Focus Mode – Chrome Extension (Manifest V3)**
+
 **Overview**
 
 YouTube Focus Mode is a productivity-focused Chrome Extension designed to transform YouTube into a structured, distraction-free learning environment. The extension dynamically removes recommended videos, comments, and sidebar suggestions during active focus sessions while integrating a fully functional, persistent timer engine.
@@ -7,7 +8,7 @@ The primary objective of this project was not just UI manipulation, but to imple
 
 This project demonstrates real-world browser extension development, asynchronous state synchronization, DOM injection strategies, and lifecycle-aware timer management.
 
-Problem Statement
+**Problem Statement**
 
 While YouTube is a powerful learning platform, it also contains highly distracting elements such as:
 
@@ -21,8 +22,8 @@ Sidebar suggestions
 
 These elements interrupt deep concentration and reduce study efficiency. The extension was built to address this problem by creating a structured focus workflow directly within the browser.
 
-Core Features
-1. Focus Mode
+**Core Features
+1. Focus Mode**
 
 The extension enables a distraction-free mode by dynamically hiding:
 
@@ -30,13 +31,13 @@ Sidebar recommendations
 
 Related videos section
 
-Comments section
+**Comments section**
 
 Secondary watch results container
 
 This is achieved through content script–based DOM manipulation and runtime style injection. Focus mode activates during an active timer session and automatically restores the original YouTube layout once the session ends.
 
-2. Interactive Clock-Based Focus Timer
+**2. Interactive Clock-Based Focus Timer**
 
 A custom-built circular clock interface allows users to visually select study duration. The timer system includes:
 
@@ -48,13 +49,13 @@ Pause functionality
 
 Resume capability
 
-Stop control
+**Stop control**
 
 Real-time MM:SS countdown display
 
 The timer continues running in the background even when the popup UI is closed. This is implemented using a background service worker that maintains time state independently from the popup interface.
 
-3. Persistent Background Timer Engine
+**3. Persistent Background Timer Engine**
 
 The timer engine runs inside the background service worker (Manifest V3). Key responsibilities include:
 
@@ -70,7 +71,7 @@ Maintaining persistence even when popup is closed
 
 This ensures accurate timing behavior without relying on popup-based intervals.
 
-4. Structured Focus–Break Workflow
+**4. Structured Focus–Break Workflow**
 
 The extension implements a Pomodoro-inspired workflow:
 
@@ -94,15 +95,15 @@ The previous focus duration can be restarted
 
 The break timer operates independently from the main focus timer.
 
-5. Chrome Notifications
+**5. Chrome Notifications**
 
 Upon session completion, a Chrome system notification is triggered using the Notifications API. This ensures that users are alerted even if they switch tabs or minimize the browser window.
 
-Technical Architecture
+**Technical Architecture**
 
 The extension follows a modular three-layer architecture:
 
-Background Layer (Service Worker)
+**Background Layer (Service Worker)**
 
 Manages focus and break timer engines
 
@@ -114,7 +115,7 @@ Controls notification logic
 
 Stores previous focus session duration
 
-Popup Layer
+**Popup Layer**
 
 Interactive clock UI
 
