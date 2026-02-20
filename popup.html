@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Focus Mode</h2>
+
+    <!-- Toggle -->
+    <label class="switch">
+        <input type="checkbox" id="toggleFocus">
+        <span class="slider"></span>
+    </label>
+
+    <!-- Clock Timer -->
+    <div class="clock-container">
+        <div class="clock" id="clock">
+
+            <!-- Numbers -->
+            <div class="numbers" id="clockNumbers"></div>
+
+            <!-- Progress Ring -->
+            <div class="progress-ring" id="progressRing"></div>
+
+            <!-- Center Time -->
+            <div class="clock-center" id="clockTime">25</div>
+
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button id="startTimer">Start</button>
+        <button id="pauseTimer">Pause</button>
+        <button id="resumeTimer">Resume</button>
+        <button id="stopTimer">Stop</button>
+    </div>
+
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
