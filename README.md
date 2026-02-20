@@ -8,24 +8,17 @@ The extension hides recommended videos, comments, and sidebar suggestions during
 
 ## Screenshots
 
-![Focus Mode Interface](<img width="359" height="475" alt="Screenshot 2026-02-19 225053" src="https://github.com/user-attachments/assets/a7d4d929-09b4-46ef-a2cd-809bea494789" />
-)
+![Focus Mode Interface](https://github.com/user-attachments/assets/a7d4d929-09b4-46ef-a2cd-809bea494789)
 Main focus mode interface with distraction removal
 
-![Clock Timer UI](<img width="1903" height="975" alt="Screenshot 2026-02-19 225042" src="https://github.com/user-attachments/assets/b2165212-f75f-4abc-9224-fcbfcd58006b" />
-)
+![Clock Timer UI](https://github.com/user-attachments/assets/b2165212-f75f-4abc-9224-fcbfcd58006b)
 Interactive clock-based time selection
 
-![Active Session](<img width="1888" height="897" alt="Screenshot 2026-02-20 112833" src="https://github.com/user-attachments/assets/c17312a8-310e-48e6-8bee-7f20aa7b35d8" />
-)
+![Active Session](https://github.com/user-attachments/assets/c17312a8-310e-48e6-8bee-7f20aa7b35d8)
 Active focus session with real-time countdown
 
-![Break Workflow](<img width="479" height="153" alt="Screenshot 2026-02-20 112849" src="https://github.com/user-attachments/assets/911cc4d0-d22f-43ad-b121-b25174546850" />
-)
+![Break Workflow](https://github.com/user-attachments/assets/911cc4d0-d22f-43ad-b121-b25174546850)
 Break and post-session workflow options
-
----
-
 ## Overview
 
 YouTube Focus Mode helps users maintain deep concentration while consuming educational content on YouTube. It removes distracting page elements during structured focus sessions and manages time using a persistent background timer engine.
