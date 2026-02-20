@@ -127,7 +127,7 @@ Sends control messages to background
 
 Retrieves session state from storage
 
-Content Script Layer
+**Content Script Layer**
 
 Injects focus mode styles
 
@@ -139,7 +139,7 @@ Renders floating break timer
 
 Listens to storage changes for UI updates
 
-Technologies Used
+**Technologies Used**
 
 Chrome Extension Manifest V3
 
@@ -157,12 +157,12 @@ DOM Manipulation and Dynamic Style Injection
 
 Asynchronous Event Handling
 
-Technical Challenges and Solutions
-Service Worker Lifecycle Management
+****Technical Challenges and Solutions**
+Service Worker Lifecycle Management**
 
 Manifest V3 service workers can become inactive. The timer engine was designed to rehydrate state from storage and maintain consistent behavior across lifecycle resets.
 
-Asynchronous Runtime Messaging
+**Asynchronous Runtime Messaging**
 
 Message passing between popup, background, and content scripts required careful handling of asynchronous responses and state updates.
 
@@ -172,20 +172,92 @@ Focus state needed to remain consistent across:
 
 Popup UI
 
-Background worker
+**Background worker**
 
-Content script
+**Content script**
 
 This was achieved using chrome.storage.local as a centralized state store.
 
-Timer Persistence Across Popup Closure
+**Timer Persistence Across Popup Closure**
 
 Since popup scripts are destroyed when closed, all timing logic was moved to the background service worker to prevent session loss.
 
-Dynamic DOM Injection Handling
+**Dynamic DOM Injection Handling**
 
 YouTube dynamically updates its layout. Focus mode selectors were carefully implemented to maintain stability even with dynamic DOM changes.
 
-Notification Permission Handling
+**Notification Permission Handling**
 
 Proper manifest configuration and icon resource handling were required to avoid runtime notification errors.
+
+**Project Structure**
+
+**youtube-focus-mode/
+│
+├── manifest.json
+├── background.js
+├── content.js
+├── popup.html
+├── popup.js
+├── popup.css
+│
+└── README.md**
+
+**Installation (Manual – Free Method)**
+
+**Clone the repository:**
+
+git clone https://github.com/yourusername/youtube-focus-mode.git
+
+Open Chrome and navigate to:
+
+chrome://extensions/
+
+Enable Developer Mode.
+
+Click “Load unpacked”.
+
+Select the project folder.
+
+The extension is now installed and ready to use.
+
+Professional Value
+
+**This project demonstrates:**
+
+Practical Chrome Extension development experience
+
+Browser-level application architecture understanding
+
+Asynchronous programming expertise
+
+**Real-time state management**
+
+UI–background synchronization patterns
+
+Manifest V3 service worker implementation
+
+Real-world debugging and lifecycle handling
+
+It reflects strong frontend engineering skills combined with browser API integration and system-level thinking.
+**
+**Future Enhancements****
+
+Customizable focus and break durations
+
+Focus analytics dashboard
+
+Daily productivity tracking
+
+Sound alerts
+
+Cloud synchronization
+
+Auto-cycle Pomodoro mode
+
+Theme customization
+
+**Author**
+Peta Sravan Kumar
+
+Focused on building practical, real-world productivity tools and browser-based applications.
